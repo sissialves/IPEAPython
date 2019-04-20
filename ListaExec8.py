@@ -13,18 +13,40 @@ Aluna: Sissi Alves da Silva
 Concatene um dicionário a um outro dicionário: e = {z : 23}. Use o método ‘update’!
 """
 
-
+#Função que acrescenta um dadd ao dicionário
 def acrescente(d1):
-    dict2 = d1
-    dict2.update({'b': 1})
-    print(dict2)
-    return dict2
+    d1['b'] = 1
+
+    return d1
+
+def test_letra(d2):
+
+    d3 = dict.keys(d2)
+    if "c" not in d3:
+        return False
+    else:
+        return True
+
+def concate_dict(d4):
+    d5 = {'z': 23}
+    d4.update(d5)
+    return d4
 
 
-if __name__ == 'main':
+if __name__ == '__main__':
+    meudict1 = dict()
+    meudict1['a'] = 0
+    print("Meu primeiro dicionário é:",meudict1)
 
-    dict1 = {}
-    dict1.update = {'a': 0}
+    meudict2 = {}
+    meudict2 = acrescente(meudict1)
+    print("Meu novo dicionário é:", acrescente(meudict1))
 
-    acrescente(dict1)
-    print('Meu novo dicionário', dict1)
+    if test_letra(meudict2) == True:
+        print("A letra c consta do dicionário")
+    else:
+        print("A letra c não consta do dicionário")
+
+    concate_dict(meudict2)
+    print("Meu dicionário concatenado é:", meudict2)
+    exit(0)
