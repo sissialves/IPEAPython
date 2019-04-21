@@ -47,3 +47,5 @@ if __name__ == '__main__':
     desenho2(limite, numestrelas)
 
     exit(0)
+
+#funcionando SAS

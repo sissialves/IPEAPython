@@ -14,7 +14,7 @@ imprima ‘OopsDoo’..
 
 #Percorrer todos os números entre 1 a 50 (inclusive)
 def print_numbers():
-    for i in range(1977, 2702):
+    for i in range(1, 51):
         if 0 == i % 3:  # se for divisível por 3
             print('Oops {} é divisível por 3'.format(i))  #imprime os números divisíveis por 3.
         if 0 == i % 5:  # se for divisível por 5
@@ -25,4 +25,4 @@ def print_numbers():
 if __name__ == '__main__':
     print_numbers()
 
-
+#funcionando SAS

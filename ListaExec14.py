@@ -11,7 +11,9 @@ vez do parágrafo fornecido pelo usuário.
 """
 from string import ascii_letters
 
+#Pangrama, ou pantograma é uma frase em que são usadas todas as letras do alfabeto de determinada língua.
 
+#Digitar frase teste: Bancos fúteis pagavam-lhe queijo, whisky e xadrez.
 def check_alphabet(paragraph):
     gabarito = ascii_letters
     tamanho = (len(gabarito))/2
@@ -23,13 +25,15 @@ def check_alphabet(paragraph):
         else:
             continue
     if count >= tamanho:
-        print('PANAGRAMA')
+        print('A frase digitada é um PANGRAMA.')
+        print('Pangrama, ou pantograma é uma frase em que são usadas todas as letras do alfabeto de determinada língua.')
     else:
-        print('Não é PANAGRAMA')
+        print('Não é PANGRAMA.')
+        print('Pangrama, ou pantograma é uma frase em que são usadas todas as letras do alfabeto de determinada língua.')
 
 if __name__ == '__main__':
 
     frase = input('Digite uma frase: ')
     check_alphabet(frase)
 
-#teste de novo
+#funcionando SAS

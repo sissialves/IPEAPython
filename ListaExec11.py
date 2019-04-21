@@ -11,21 +11,22 @@ Aluna: Sissi Alves da Silva
 de cada uma. Por exemplo: a lista [0, 0, 1, 1, 1, 2, 5], resultaria em: {1: 3, 0: 2, 2: 1, 5: 1}.
 """
 
-def histograma(lista):
-    lista2 = lista
-    lista3 = {}
-    count = 0
-    for each in lista2:
-        for each in lista:
-            
-            count = count + 1
-            lista3[(count)] = [(each)]
+def hist(lteste):
 
+#dicionário que vai armazenar o número(chave do dicionário) e quantas vezes ele aparece na lista(valor)
 
-    print(lista3)
+    dicionario = {}
+    for each in lteste:
+        dicionario[each] = dicionario.get(each, 0) + 1
+
+    return dicionario
+
 
 if __name__ == '__main__':
+    listateste = [0, 0, 1, 1, 1, 2, 5]
 
-    l = [0, 0, 1, 1, 1, 2, 5]
-    histograma(l)
+    print("A lista teste é: ",listateste)
+    print("O histograma da lista teste é: ",hist(listateste))
+
+#funcionando SAS
 

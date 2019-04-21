@@ -30,3 +30,5 @@ if __name__ == '__main__':
         print("A letra que você digitou é vogal.")
     else:
         print("A letra que você digitou é uma consoante.")
+
+#funcionando SAS

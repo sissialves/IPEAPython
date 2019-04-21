@@ -20,3 +20,6 @@ if __name__ == '__main__':
     palavra = input("Digite uma palavra ou frase sem espaços: ")
 
     print("Número de letras da palavra/frase é", numletras(palavra))
+
+
+#funcionando SAS

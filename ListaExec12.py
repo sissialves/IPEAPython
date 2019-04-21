@@ -34,3 +34,4 @@ if __name__ == '__main__':
 
     print(" Existem {} números primos até 200.".format(len(qtdade)))
     print(" São eles:",qtdade)
+#funcionando SAS

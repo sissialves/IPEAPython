@@ -69,3 +69,5 @@ if __name__ == '__main__':
     print('A média dos valores da lista é:', mediavalores(listanum))
 
     print('A mediana dos valores da lista é:', mediana(listanum))
+
+#funcionando SAS

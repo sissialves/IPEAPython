@@ -31,3 +31,5 @@ if __name__ == '__main__':
     print("O valor mínimo do dicionário é:",valorminimo(dicionario))
 
     print("O valor máximo do dicionário é:",valormaximo(dicionario))
+
+#funcionando SAS
