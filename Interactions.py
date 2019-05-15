@@ -29,7 +29,9 @@ def interactions(lst_ag, lst_shop):
 def do_interaction(num_agents, num_shops):
     # tipo = Agent()
     agents = create(Agent, num_agents)
+    random.shuffle(agents)
     shops = create(Shop, num_shops)
+    random.shuffle(shops)
     salaries(agents)
     interactions(agents, shops)
     return agents, shops

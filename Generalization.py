@@ -31,13 +31,14 @@ if __name__ == '__main__':
         f.write(
             str([lista_ag, lista_shops]))
         f.write('\n')
-        for i in range(len(lista_ag)):
+        f.write(str(["ID Cliente, ID Loja, Media FUN, Media Balance Agentes, Media Balance Lojas, Media Balance Total, Custo Medio\n"]))
 
+        for i in range(len(lista_ag)):
 
             clientes, lojas = do_interaction(lista_ag[i], lista_shops[i])
 
             #print(average_cost(lojas), average_balance(clientes,lojas), average_fun(clientes))
-            f.write(str([clientes[i], lojas[i], average_fun(clientes), average_balance(clientes, lojas), average_cost(lojas)]))
+            f.write(str([clientes[i].id, lojas[i].id, average_fun(clientes), average_balance(clientes, lojas), average_cost(lojas)]))
             f.write('\n')
 
 

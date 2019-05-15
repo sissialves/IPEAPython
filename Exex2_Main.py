@@ -2,15 +2,11 @@
 IPEA
 Mestrado Profissional em Políticas Públicas e Desenvolvimento
 Disciplina: Python para Metodologia Baseada em Agentes
-
 2a. Lista de Exercícios
-
 Aluna: Sissi Alves da Silva
-
 1. Objetivo: criar agentes e interações. Agentes vão às compras e ganham satisfação. Lojas, com capacidade
 limitada recebem os clientes. Vendem satisfação. Análise da interação (simples) na medida em que se aumentam
 clientes.
-
 """
 
 import random
