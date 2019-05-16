@@ -36,9 +36,9 @@ class Shop:
         # i é o número de registro
         self.id = nId_s
         self.account = Account(i)
-        self.capacity = random.randrange(1, 10)
-        self.fun = random.randrange(1, 10)
-        self.cost = random.randrange(1, 10)
+        self.capacity = random.randrange(100, 105)
+        self.fun = random.randrange(4, 8)
+        self.cost = random.randrange(20, 30)
 
     def visit(self):
         self.capacity -= 1
