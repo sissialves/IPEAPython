@@ -4,7 +4,7 @@ from Exex2_Main import Shop
 from Interactions import do_interaction,average_fun, average_balance, average_cost
 import os
 import random
-
+#criação de uma lista de agentes e uma lista de lojas
 def create_list(nagents, nshops):
     res1 = list()
     res2 = list()
@@ -16,12 +16,13 @@ def create_list(nagents, nshops):
 
 
 
-
 if __name__ == '__main__':
+
+    #Função principal de generalização.
     lista_ag, lista_shops=create_list(20, 30)
     file='saida.csv'
 
-    #print(lista_ag, lista_shops)
+    #Cria o arquivo "file"
     if os.path.exists(file):
         os.remove(file)
     with open(file, 'a') as f:
@@ -29,7 +30,7 @@ if __name__ == '__main__':
           #  str([lista_ag, lista_shops]))
         f.write('\n')
         f.write('ID Cliente; ID Loja; Media FUN; Media Balance Agentes; Media Balance Lojas; Media Balance Total; Custo Medio\n');
-
+        #Para todos os agentes em lista_ag, roda a interação. E escreve no file,
         for i in range(len(lista_ag)):
 
             clientes, lojas = do_interaction(lista_ag[i], lista_shops[i])

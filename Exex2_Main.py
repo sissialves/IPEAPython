@@ -13,19 +13,23 @@ import random
 
 
 class Account:
+    #Toda conta recebe um Id como parâmetro de entrada.
     def __init__(self, nId_a):
         self.id = nId_a
         self.balance = 0
-
+    #Método que recebe recursos amount e acrescenta ao balanço.
     def credit(self, value):
         self.balance += value
 
+    #Verifica se a conta tem os recursos necessários(amount). Retorna True se houver recursos
+    #retorna False, caso contrário
     def check_balance(self, amount):
         if self.balance - amount < 0:
             return False
         else:
             return True
-
+    # Método que retira recursos (amount) do balanço e retorna a quantia
+    #retirada.
     def debit(self, amount):
         self.balance -= amount
         return amount
@@ -36,14 +40,18 @@ class Shop:
         # i é o número de registro
         self.id = nId_s
         self.account = Account(i)
+        # as variáveis capacity, fun e cost são geradas, no momento de criação da
+        #instância com valores aleatórios dentro das faixas abaixo:
         self.capacity = random.randrange(100, 105)
         self.fun = random.randrange(4, 8)
         self.cost = random.randrange(20, 30)
-
+    # Método que diminui a capacidade da loja de 1, sempre que ocorrer uma visita
+    # de um cliente.
     def visit(self):
         self.capacity -= 1
 
-
+    #Método que verifica a capacidade da loja.
+    # Se a capacidade chegar a zero, retorna False. Senão, retorna True
     def check_capacity(self):
         if self.capacity == 0:
             return False
@@ -56,10 +64,11 @@ class Agent:
         self.fun = 0
         self.id = nId_ag
         self.account = Account(i)
-
+    #Método que acumula a satisfação do cliente, ao visitar uma loja.
+    #Recebe o valor necessário para pagar à loja.
     def get_fun(self, amount):
         self.fun += amount
-
+    #Método que verifica se os recursos do Agent são suficientes para bancar o Shop.cost
     def check_funds(self, shop):
         if self.account.balance > shop.cost:
             return True
